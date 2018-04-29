@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Map : MonoBehaviour
 {
+	public string _id;
 	public string _name;
 	public Sprite _image;
 }

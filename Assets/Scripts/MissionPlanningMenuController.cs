@@ -9,8 +9,14 @@ public class MissionPlanningMenuController : MonoBehaviour {
 	// PRIVATE //
 	private bool _isThreadRunning;
 
+
 	// PUBLIC //
 	public Text _console;
+	public Image _mapDisplay;
+	public Dropdown _dropdownMap;
+	public Dropdown _dropdownMission;
+
+	public Map[] _maps;
 
 	// AUX //
 	private int cont = 0;
@@ -19,17 +25,26 @@ public class MissionPlanningMenuController : MonoBehaviour {
 	void Start () 
 	{
 		_isThreadRunning = false;
-		_console.text = "";
+		//_console.text = "";
+
+		List<string> mapNames = new List<string>();
+		foreach (Map map in _maps) 
+		{
+			mapNames.Add (map._name);
+		}
+		_dropdownMap.AddOptions (mapNames);
 	}
 
 	void Update()
 	{
+		/*
 		if (_isThreadRunning) 
 		{
 			_console.text = "Calulando ruta..." + cont++;
 		} else {
 			_console.text = "Esperando..." + cont++;
 		}
+		*/
 
 		/*
 		if(_updateData)
@@ -68,21 +83,13 @@ public class MissionPlanningMenuController : MonoBehaviour {
 
 	}
 
-	/*
-	// Se ejecuta cuando se activa el objeto //
-	void OnEnable(){
-		PathPlanningExecutor.onThreadExit += HandleOnThreadExit;
-	}
+	/// <summary>
+	/// Se ejecuta cuando cambia un valor en el dropdown de mapas.
+	/// </summary>
+	public void onDropDownMapVC (int index)
+	{
+		_console.text = _maps [index]._id;
+		_mapDisplay.sprite = _maps [index]._image;
 
-	// Se jecuta cuando se desactiva el objeto //
-	void OnDisable(){
-		PathPlanningExecutor.onThreadExit -= HandleOnThreadExit;
 	}
-
-	// Metodo que se ejecuta cuando termina la ejecucion del hilo //
-	void HandleOnThreadExit(){
-		Debug.Log ("Termino la ejecucion correctamente.");
-		_isThreadRunning = false;
-	}
-	*/
 }
