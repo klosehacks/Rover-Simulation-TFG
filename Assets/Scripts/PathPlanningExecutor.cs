@@ -14,12 +14,12 @@ using UnityEngine.UI;
 		static string ruta_directorio  = ".\\PathPlanning\\Paths";
 		static string ruta_archivo_jar = "..\\PathPlanning.jar";
 		static string ruta_archivo_dtm = "..\\DTM\\DTEEC_023928_1205_024060_1205_U01.IMG";
-		static string ruta_archivo_out = "pathPoints.txt";
+		static string ruta_archivo_out = "m01_01.txt";
 
-		static int posicion_inicial_x = 1000;
-		static int posicion_inicial_y = 1000;
-		static int posicion_final_x = 1200;
-		static int posicion_final_y = 1200;
+		static int posicion_inicial_x = 2000;
+		static int posicion_inicial_y = 1500;
+		static int posicion_final_x = 3200;
+		static int posicion_final_y = 1000;
 
 		static float valor_heuristico = 0.5f;
 
@@ -52,21 +52,18 @@ using UnityEngine.UI;
 			pendiente + "",
 			ruta_archivo_out
 		};
-	/*
-	public PathPlanningExecutor()
-	{
-	}
-	*/
+
 		
 	public int execute()
 	{
-		UnityEngine.Debug.Log ("Inicia la ejecucion");
-
 		string argumentos = "";
 		foreach(String str in argumentos_cadena)
 		{
 			argumentos += str + " ";
 		}
+
+		UnityEngine.Debug.Log ("java " + argumentos);
+
 			try
 			{
 				Process processJar = new Process();

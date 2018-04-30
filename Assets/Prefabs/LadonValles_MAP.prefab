@@ -54,3 +54,5 @@ MonoBehaviour:
   _id: 'DTEED_033352_1605_033774_1605_A01   '
   _name: Ladon Valles
   _image: {fileID: 21300000, guid: 456408602bc6943d081839ae9937b8cf, type: 3}
+  _lines: {x: 2602, y: 3766}
+  _scalingFactor: 1

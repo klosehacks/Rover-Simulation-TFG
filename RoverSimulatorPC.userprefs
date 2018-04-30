@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MissionPlanningMenuController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MissionPlanningMenuController.cs">
     <Files>
-      <File FileName="Assets/Scripts/MissionPlanningMenuController.cs" Line="33" Column="27" />
-      <File FileName="Assets/Scripts/Map.cs" Line="11" Column="1" />
+      <File FileName="Assets\Scripts\MissionPlanningMenuController.cs" Line="124" Column="71" />
+      <File FileName="Assets\Scripts\FileProcessing.cs" Line="55" Column="42" />
+      <File FileName="Assets\Scripts\Path.cs" Line="9" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/CalculoDeRutas.unity
+- path: Assets/Scenes/MenuDeRutas.unity
   isLoaded: 1
   isActive: 1
